@@ -1,0 +1,10 @@
+<p>read-animal works!</p>
+
+<div *ngIf="animals$">
+
+    <ul>
+        <li (click)="removeAnimal(animal)" *ngFor="let animal of animals$ | async">
+            <a data-id="{{animal.id}}">{{ animal.name }}</a>
+        </li>
+    </ul>
+</div>

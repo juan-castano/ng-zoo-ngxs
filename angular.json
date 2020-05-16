@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ngxs-example"
+    }
+  },
+  "defaultProject": "ngxs-example",
+  "cli": {
+    "analytics": false
+  }
 }

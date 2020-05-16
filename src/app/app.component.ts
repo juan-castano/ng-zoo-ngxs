@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import { Store, Select } from '@ngxs/store';
+import { AddAnimal } from './models/actions/animal.actions';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { withLatestFrom } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +11,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ngxs-example';
+
+    @Select(state => state.animals) animals$: Observable<any>;
+
+    constructor(protected store: Store) {}
 }
